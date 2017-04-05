@@ -6,6 +6,7 @@
 package classes;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  *
@@ -13,7 +14,7 @@ import java.util.List;
  */
 public class Vertice {
     private String nome;
-    private List<Aresta> arestasAdjacentes;
+
 
     public Vertice() {
     }
@@ -26,14 +27,35 @@ public class Vertice {
         this.nome = nome;
     }
 
-
-    public List<Aresta> getArestasAdjacentes() {
-        return arestasAdjacentes;
+    @Override
+    public String toString() {
+        return "Vertice{" + "nome=" + nome + '}';
     }
 
-    public void setArestasAdjacentes(List<Aresta> arestasAdjacentes) {
-        this.arestasAdjacentes = arestasAdjacentes;
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        return hash;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Vertice other = (Vertice) obj;
+        if (!Objects.equals(this.nome, other.nome)) {
+            return false;
+        }
+        return true;
+    }
+
     
     
 }
