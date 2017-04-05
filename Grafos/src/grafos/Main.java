@@ -6,6 +6,7 @@
 package grafos;
 
 import classes.Aresta;
+import classes.Grafo;
 import classes.Vertice;
 import java.io.BufferedReader;
 import java.io.File;
@@ -20,7 +21,7 @@ import java.util.Map;
  *
  * @author a899607
  */
-public class GrafoDirigido {
+public class Main {
 
     public static void lerArquivo() {
         String texto;
@@ -40,35 +41,16 @@ public class GrafoDirigido {
         }
     }
 
-    public static void inserirVerticeGrafo(){
-        
-    }
-    
-    public static void inserirArestaGrafo(){
-        
-    }
-    
-    public static Map<Vertice, List<Aresta>> getGrafo(){
-        return null;
-    }
-    
-    public static List<Vertice> getTodosVertices(){
-        return null;
-    }
-    
-    public static Vertice getVertice(){
-        return null;
-    }
-        
-    
-    public static void mostrarGrafo(){
-        
-    }
+
         
     public static void main(String[] args) {
         // TODO code application logic here
-        Map<Vertice, List<Aresta>> grafo = new HashMap<>();
-        lerArquivo();
+      
+       Vertice a = new Vertice();
+       a.setNome("A");
+       Grafo.inserirVerticeGrafo(a);
+       Grafo.mostrarGrafo();
+      //  lerArquivo();
     }
 
 }
