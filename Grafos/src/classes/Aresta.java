@@ -10,17 +10,17 @@ package classes;
  * @author a899607
  */
 public class Aresta {
-    private Vertice v1;
+    private Object v1;
     private String peso;
 
     public Aresta() {
     }
     
-    public Vertice getV1() {
+    public Object getV1() {
         return v1;
     }
 
-    public void setV1(Vertice v1) {
+    public void setV1(Object v1) {
         this.v1 = v1;
     }
 

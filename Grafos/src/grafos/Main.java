@@ -6,8 +6,10 @@
 package grafos;
 
 import classes.Aresta;
+import classes.BuscaLargura;
 import classes.Grafo;
 import classes.Vertice;
+import classes.VerticeLargura;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -45,11 +47,47 @@ public class Main {
         
     public static void main(String[] args) {
         // TODO code application logic here
-      
-       Vertice a = new Vertice();
+       Grafo grafoLargura = new Grafo();
+       VerticeLargura a = new VerticeLargura();
        a.setNome("A");
-       Grafo.inserirVerticeGrafo(a);
-       Grafo.mostrarGrafo();
+       VerticeLargura b = new VerticeLargura();
+       b.setNome("B");
+       VerticeLargura c = new VerticeLargura();
+       c.setNome("C");
+       VerticeLargura d = new VerticeLargura();
+       d.setNome("D");
+       VerticeLargura e = new VerticeLargura();
+       e.setNome("E");
+       
+       Aresta ab = new Aresta();
+       ab.setPeso("8");
+       ab.setV1(b);
+       Aresta ac = new Aresta();
+       ac.setPeso("4");
+       ac.setV1(c);
+       Aresta bd = new Aresta();
+       bd.setPeso("9");
+       bd.setV1(d);
+       Aresta ce = new Aresta();
+       ce.setPeso("9");
+       ce.setV1(e);
+       
+       
+       grafoLargura.inserirVerticeGrafo(a);
+       grafoLargura.inserirVerticeGrafo(b);
+       grafoLargura.inserirVerticeGrafo(c);
+       grafoLargura.inserirVerticeGrafo(d);
+       grafoLargura.inserirVerticeGrafo(e);
+       
+       grafoLargura.inserirArestaGrafo(a, ab);
+       grafoLargura.inserirArestaGrafo(a, ac);
+       grafoLargura.inserirArestaGrafo(b, bd);
+       grafoLargura.inserirArestaGrafo(c, ce);
+       
+       System.out.println("\n Arvore :");
+       grafoLargura.mostrarGrafoLargura();
+            
+      
       //  lerArquivo();
     }
 

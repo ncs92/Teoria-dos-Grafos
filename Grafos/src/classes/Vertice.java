@@ -14,6 +14,7 @@ import java.util.Objects;
  */
 public class Vertice {
     private String nome;
+    
 
 
     public Vertice() {
